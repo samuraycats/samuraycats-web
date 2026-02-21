@@ -1,107 +1,13 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>El Mishi Sistemas - Software a la Medida</title>
-  <!-- Bulma CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <!-- Dark/Light mode toggle -->
-  <style>
-    html {
-      transition: background-color 0.3s, color 0.3s;
-    }
-    .dark-mode {
-      background-color: #121212;
-      color: #e0e0e0;
-    }
-    .toggle-button {
-      position: fixed;
-      top: 1rem;
-      right: 1rem;
-      z-index: 1000;
-    }
-  </style>
-</head>
-<body>
-  <button class="button is-small toggle-button" id="themeToggle">Modo oscuro</button>
-
-  <section class="section">
-    <div class="container">
-      <h1 class="title has-text-centered">El Mishi Sistemas</h1>
-      <h2 class="subtitle has-text-centered">Desarrollo de software a la medida</h2>
-    </div>
-  </section>
-
-  
-  <section class="section">
-    <div class="container">
-      <h3 class="title is-3">Misión</h3>
-      <p>Brindar soluciones tecnológicas personalizadas que impulsen el crecimiento de empresas y emprendedores, utilizando herramientas modernas y un equipo comprometido con la calidad.</p>
-
-      <h3 class="title is-3">Visión</h3>
-      <p>Ser referencia en desarrollo de software a medida en Latinoamérica, reconocidos por la innovación y la satisfacción de nuestros clientes.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h3 class="title is-3">Servicios</h3>
-      <ul>
-        <li>Desarrollo de aplicaciones móviles (iOS/Android)</li>
-        <li>Aplicaciones de escritorio (Windows, macOS, Linux)</li>
-        <li>Desarrollo web full-stack</li>
-        <li>Integraciones y APIs</li>
-        <li>Mantenimiento y soporte continuo</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h3 class="title is-3">Precios de ejemplo</h3>
-      <div class="columns is-multiline">
-        <div class="column is-one-third">
-          <div class="box">
-            <h4 class="title is-4">Paquete Básico</h4>
-            <p>Aplicación simple web o móvil</p>
-            <p><strong>Desde:</strong> $1,500 USD</p>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="box">
-            <h4 class="title is-4">Paquete Profesional</h4>
-            <p>Aplicación avanzada con backend personalizado</p>
-            <p><strong>Desde:</strong> $5,000 USD</p>
-          </div>
-        </div>
-        <div class="column is-one-third">
-          <div class="box">
-            <h4 class="title is-4">Paquete Empresarial</h4>
-            <p>Soluciones completas multiplataforma</p>
-            <p><strong>Desde:</strong> $12,000 USD</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p>&copy; 2026 El Mishi Sistemas. Todos los derechos reservados.</p>
-    </div>
-  </footer>
-
-  <script>
-    const toggle = document.getElementById('themeToggle');
-    toggle.addEventListener('click', () => {
-      document.documentElement.classList.toggle('dark-mode');
-      if (document.documentElement.classList.contains('dark-mode')) {
-        toggle.textContent = 'Modo claro';
-      } else {
-        toggle.textContent = 'Modo oscuro';
-      }
-    });
-  </script>
-</body>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>samuraycats</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
