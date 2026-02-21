@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Button, Paper } from '@mui/material';
+import { Container, Typography,Button, Paper } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import ProductList from './ProductList';
 
