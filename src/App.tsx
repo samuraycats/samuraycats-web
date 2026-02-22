@@ -30,7 +30,7 @@ function App() {
       <CssBaseline />
       <Router>
         <NavBar darkMode={darkMode} onToggleTheme={toggleTheme} />
-        <main style={{ flex: 1 }}>
+        <main style={{marginTop:"4.5em",  width:"100%", margin:"2em", backgroundColor:"red" }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/catalog" element={<ProductList />} />
