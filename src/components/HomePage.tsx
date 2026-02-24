@@ -6,6 +6,10 @@ export default function HomePage() {
   return (
     <Container sx={{ mt: 4 }}>
       <Paper elevation={3} sx={{ py: 6, mb: 6, textAlign: 'center' }}>
+          <h1 className="text-4xl font-bold underline">
+      Hello world!
+    </h1>
+
         <Typography variant="h3" component="h1" gutterBottom>
           Bienvenido a SamurayCats
         </Typography>
