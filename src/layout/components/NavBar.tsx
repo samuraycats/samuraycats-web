@@ -38,7 +38,7 @@ const menu: { label: string, link: string }[] = [
   },
   {
     label: "Nosotros",
-    link: "/home/our"
+    link: "/home/company/about"
   },
   {
     label: "Desarollo",
@@ -46,7 +46,7 @@ const menu: { label: string, link: string }[] = [
   },
   {
     label: "Contacto",
-    link: "#"
+    link: "/home/legal/contact"
   },
 ]
 
