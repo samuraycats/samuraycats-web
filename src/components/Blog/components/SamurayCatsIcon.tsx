@@ -3,7 +3,7 @@ import SvgIcon from '@mui/material/SvgIcon';
 export default function SamurayCatsIcon() {
   return (
     <SvgIcon
-      sx={{ height: 35, width: 230, mr: 2 }}
+      sx={{ height: 35, width: 200, mr: 2 }}
       viewBox="0 0 160 26"
     >
       <circle cx="12" cy="12" r="12" fill="#bcc0c1" />

@@ -1,15 +1,15 @@
-import  { Fragment, lazy } from "react";
+import { Fragment, lazy } from "react";
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import SecurityRoute from "../routes/SecurityRoute";
-import CleanLayout from "../layout/CleanLayout";
 import PublicLayout from "../layout/PublicLayout";
-PublicLayout
 
-const LazySignIn = lazy(() => import("../page/home/LogIn"));
-const LazyHome = lazy(() => import("../page/home"));
-const LazyApp = lazy(() => import("../page/app"));
+
+const LazyHome = lazy(() => import("pages/home"));
+const LazyApp = lazy(() => import("pages/app"));
+const LazyBlog = lazy(() => import("components/Blog"));
+const LazyLogin = lazy(() => import("pages/login"));
 
 export const getLocalStorage = () => {
   try {
@@ -29,19 +29,29 @@ const InitialRoute = () => {
             element={
               <SecurityRoute level="public">
                 <PublicLayout>
-                  <LazyHome />
+                  <LazyBlog />
+                </PublicLayout>
+              </SecurityRoute>
+            }
+          />
+
+          <Route path="/login"
+            element={
+              <SecurityRoute level="public">
+                <PublicLayout>
+                  <LazyLogin />
                 </PublicLayout>
               </SecurityRoute>
             }
           />
 
           <Route
-            path="/login"
+            path="/home/*"
             element={
               <SecurityRoute level="public">
-                <CleanLayout>
-                  <LazySignIn />
-                </CleanLayout>
+                <PublicLayout>
+                  <LazyHome />
+                </PublicLayout>
               </SecurityRoute>
             }
           />

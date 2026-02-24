@@ -1,6 +1,6 @@
 import { CssBaseline } from "@mui/material";
 import AppTheme from "../components/Blog/theme/AppTheme";
-import AppAppBar from "../components/Blog/components/AppBar";
+import AppAppBar from "./components/NavBar";
 
 interface CleanLayoutProps {
   children?: any

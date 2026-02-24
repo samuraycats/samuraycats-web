@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/X';
-import SamurayCatsIcon from '../Blog/components/SamurayCatsIcon';
+import SamurayCatsIcon from '../../components/Blog/components/SamurayCatsIcon';
 
 import { Link } from 'react-router-dom';
 function Copyright() {
@@ -128,7 +128,7 @@ export default function Footer() {
                 Aplicaciones moviles
               </span>
             </Link>
-            <Link color="text.secondary" to="/app/hibrid">
+            <Link color="text.secondary" to="/app/hybrid">
               <span className='underline decoration-solid'>
                 Aplicacion híbrida
               </span>
@@ -148,19 +148,19 @@ export default function Footer() {
             }}
           >
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
-              Compañias
+              Compañia
             </Typography>
-            <Link color="text.secondary" to="/home/about">
+            <Link color="text.secondary" to="/home/company/about">
               <span className='underline decoration-solid'>
                 Acerca de nosotros
               </span>
             </Link>
-            <Link color="text.secondary" to="/home/policy">
+            <Link color="text.secondary" to="/home/company/policy">
               <span className='underline decoration-solid'>
                 Politicas
               </span>
             </Link>
-            <Link color="text.secondary" to="/home/faq">
+            <Link color="text.secondary" to="/home/company/faq">
               <span className='underline decoration-solid'>
                 Preguntas y respuestas
               </span>
@@ -176,19 +176,19 @@ export default function Footer() {
             <Typography variant="body2" sx={{ fontWeight: 'medium' }}>
               Legal
             </Typography>
-            <Link color="text.secondary" to="/home/terms">
+            <Link color="text.secondary" to="/home/legal/terms">
               <span className='underline decoration-solid'>
                 Terminos
               </span>
 
             </Link>
-            <Link color="text.secondary" to="/home/privacy">
+            <Link color="text.secondary" to="/home/legal/privacy">
               <span className='underline decoration-solid'>
                 Privacidad
               </span>
 
             </Link>
-            <Link color="text.secondary" to="/home/contact">
+            <Link color="text.secondary" to="/home/legal/contact">
               <span className='underline decoration-solid'>
                 Contacto
               </span>
@@ -206,18 +206,27 @@ export default function Footer() {
             borderColor: 'divider',
           }}
         >
-          <div>
-            <Link color="text.secondary" to="#" >
-              Política de Privacidad
+          <Stack direction="row" spacing={2}>
+            <Link color="text.secondary" to="/home/legal/privacy" >
+              <Typography variant='body2'>
+                Política de Privacidad
+              </Typography>
             </Link>
+
             <Typography sx={{ display: 'inline', mx: 0.5, opacity: 0.5 }}>
               &nbsp;•&nbsp;
             </Typography>
-            <Link color="text.secondary" to="#">
-              Terminos del servicio
+
+            <Link color="text.secondary" to="/home/legal/terms">
+              <Typography variant='body2'>
+                Terminos del servicio
+              </Typography>
+
             </Link>
-            <Copyright />
-          </div>
+          </Stack>
+          <Copyright />
+
+
           <Stack
             direction="row"
             spacing={1}

@@ -1,14 +1,14 @@
-import AppBar from '../components/Blog/components/AppBar'
+import NavBar from './components/NavBar'
 import AppTheme from '../components/Blog/theme/AppTheme'
 import { CssBaseline } from '@mui/material'
 import Container from '@mui/material/Container';
-import Footer from '../components/Footer';
+import Footer from './components/Footer';
 
 const PublicLayout = (props: { children?: any }) => {
   return (
     <AppTheme {...props}>
       <CssBaseline enableColorScheme />
-      <AppBar />
+      <NavBar />
       <Container
         maxWidth="lg"
         component="main"

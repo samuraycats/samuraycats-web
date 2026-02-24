@@ -1,5 +1,5 @@
 import './App.css';
-import InitialRouter from './page';
+import InitialRouter from './pages';
 
 function App() {
   return (

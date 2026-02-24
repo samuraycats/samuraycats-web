@@ -12,7 +12,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 
-import { GoogleIcon, SitemarkIcon } from './CustomIcons';
+import { GoogleIcon } from './CustomIcons';
 import ForgotPassword from './ForgotPassword';
 
 const Card = styled(MuiCard)(({ theme }) => ({
@@ -88,10 +88,7 @@ export default function SignInCard() {
   };
 
   return (
-    <Card variant="outlined">
-      <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-        <SitemarkIcon />
-      </Box>
+    <Card variant="outlined" className='mt-5'>
       <Typography
         component="h1"
         variant="h4"
@@ -162,7 +159,7 @@ export default function SignInCard() {
         </Button>
 
       </Box>
-      <Divider>or</Divider>
+      <Divider>o</Divider>
       <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
         <Button
           fullWidth

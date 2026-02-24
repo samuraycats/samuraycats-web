@@ -11,8 +11,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import ColorModeIconDropdown from '.././theme/ColorModeIconDropdown';
-import SamurayCatsIcon from './SamurayCatsIcon';
+import ColorModeIconDropdown from '../../components/Blog/theme/ColorModeIconDropdown';
+import SamurayCatsIcon from '../../components/Blog/components/SamurayCatsIcon';
 import { Link } from 'react-router-dom';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
@@ -31,7 +31,26 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   padding: '8px 12px',
 }));
 
-export default function AppAppBar() {
+const menu: { label: string, link: string }[] = [
+  {
+    label: "Productos",
+    link: "/app"
+  },
+  {
+    label: "Nosotros",
+    link: "/home/our"
+  },
+  {
+    label: "Desarollo",
+    link: "#"
+  },
+  {
+    label: "Contacto",
+    link: "#"
+  },
+]
+
+export default function NavBar() {
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -57,25 +76,15 @@ export default function AppAppBar() {
             </Link>
 
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-              <Link to="/app">
-                <Button variant="text" color="info" size="small">
-                  Productos
-                </Button>
-              </Link>
 
-              <Link to="/home/our">
-                <Button variant="text" color="info" size="small">
-                  Nosotros
-                </Button>
-              </Link>
+              {menu.map((item, key) => {
+                return (<Link key={key} to={item.link}>
+                  <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
+                    {item.label}
+                  </Button>
+                </Link>)
+              })}
 
-
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Desarollo
-              </Button>
-              <Button variant="text" color="info" size="small" sx={{ minWidth: 0 }}>
-                Contacto
-              </Button>
             </Box>
           </Box>
           <Box
@@ -118,12 +127,12 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                {menu.map((item, key) => {
+                  return (<Link key={key} to={item.link}>
+                    <MenuItem>{item.label}</MenuItem>
+                  </Link>)
+                })}
+
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>
                 </MenuItem>
